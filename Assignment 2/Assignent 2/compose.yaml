@@ -1,0 +1,35 @@
+version: '3'
+services:
+  webapp:
+    build:
+      context: .
+    #image: node:19.7.0-alpine
+    environment:
+      #NODE_ENV: production
+      POSTGRES_HOST: db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: bob100805862
+      POSTGRES_DB: labonedb
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3000:3000" 
+
+  db:
+    image: postgres:latest
+    user: postgres
+    environment:
+      POSTGRES_PASSWORD: aaron100589003
+      POSTGRES_DB: labonedb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    expose:
+      - 5432
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+volumes:
+  db-data:
