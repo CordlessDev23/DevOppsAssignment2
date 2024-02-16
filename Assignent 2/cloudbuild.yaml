@@ -1,0 +1,14 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/Assignment2:${Commit_SHA}', '/Assignment\ 2']
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/Assignmnet2:${Commit_SHA}' , '/Assignment\ 2']
+
+options:
+  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
+
+images:
+  - northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/Assignment2:${Commit_SHA}
