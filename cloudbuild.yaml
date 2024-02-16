@@ -10,5 +10,5 @@ steps:
 options:
   defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
 
-images:
-  - northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/Assignment2:${Commit_SHA}
+#images:
+ # - northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/Assignment2:${Commit_SHA}
