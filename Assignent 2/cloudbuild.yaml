@@ -1,8 +1,0 @@
-steps:
-  # Docker Build
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003:commit SHA','/Assignmet\ 2']
-
-  # Docker Push
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/ballantyne']
