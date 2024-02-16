@@ -11,7 +11,7 @@ steps:
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
-    args: ['run','deploy','assignment2','--image','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/assignment2:${COMMIT_SHA}','--region','northamerica-northeast2','--port','3000']
+    args: ['run','deploy','assignment2','--image','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/assignment2:${COMMIT_SHA}','--region','northamerica-northeast2','--port','3000','--allow-unauthenticated']
 
 options:
   defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
