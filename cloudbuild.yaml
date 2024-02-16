@@ -5,7 +5,7 @@ steps:
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/assignmnet2:${COMMIT_SHA}']
+    args: ['push','northamerica-northeast2-docker.pkg.dev/lab6-403023/aaron100589003/assignment2:${COMMIT_SHA}']
 
 options:
   defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
